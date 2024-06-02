@@ -3,6 +3,7 @@
 import { Hi2Icons, Images } from "@/constant";
 import Image from "next/image";
 import Link from "next/link";
+import { buttonVariants } from "./ui/button";
 
 export default function NotFound() {
   return (
@@ -23,12 +24,10 @@ export default function NotFound() {
         </p>
         <Link
           href="/"
-          className="py-2 px-6 text-black"
-
-          //   className={buttonVariants({
-          //     size: "sm",
-          //     className: "mt-5 text-xs flex items-center gap-2",
-          //   })}
+          className={buttonVariants({
+            size: "sm",
+            className: "mt-5 text-xs flex items-center gap-2",
+          })}
         >
           <Hi2Icons.HiOutlineArrowLongLeft />
           Go home

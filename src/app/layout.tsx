@@ -5,8 +5,14 @@ import { getBaseURL } from "@/utils";
 import { Config } from "@/config";
 import NextTopLoader from "nextjs-toploader";
 import { Toaster } from "react-hot-toast";
+import { Inter as FontSans } from "next/font/google";
+import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/theme-provider";
 
-const inter = Inter({ subsets: ["latin"] });
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 export async function generateMetadata(): Promise<Metadata> {
   const BASE_URL = await getBaseURL();
@@ -54,10 +60,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <main>{children}</main>
-        <NextTopLoader />
-        <Toaster />
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable
+        )}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <main>{children}</main>
+          <NextTopLoader />
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );
