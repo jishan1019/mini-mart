@@ -4,10 +4,10 @@ import "./globals.css";
 import { getBaseURL } from "@/utils";
 import { Config } from "@/config";
 import NextTopLoader from "nextjs-toploader";
-import { Toaster } from "react-hot-toast";
 import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "sonner";
 
 const fontSans = FontSans({
   subsets: ["latin"],
