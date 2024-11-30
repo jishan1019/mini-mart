@@ -14,6 +14,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { User } from "lucide-react";
+import { toast } from "sonner";
 
 export default function EmployeeProfile() {
   const [name, setName] = useState("Jon Doe");
@@ -36,6 +37,8 @@ export default function EmployeeProfile() {
     e.preventDefault();
     // Here you would typically send the data to a server
     console.log({ name, phone, address, image });
+
+    toast.success("Profile updated successfully");
   };
 
   return (

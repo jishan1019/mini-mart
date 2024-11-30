@@ -35,7 +35,7 @@ const Sidebar = () => {
     {
       icon: LayoutDashboard,
       label: "Admin Dashboard",
-      href: "/dashboard/admin",
+      href: "/dashboard",
     },
     {
       icon: UserPlus,
@@ -70,7 +70,7 @@ const Sidebar = () => {
     {
       icon: UserRoundPen,
       label: "Profile",
-      href: "/dashboard/employee/profile",
+      href: "/dashboard/employee",
     },
     {
       icon: ListCheck,

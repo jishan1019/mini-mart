@@ -11,6 +11,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { format } from "date-fns";
+import { toast } from "sonner";
 
 interface CheckRecord {
   date: Date;
@@ -35,6 +36,7 @@ export default function CheckInCheckOutList() {
         ...records,
       ]);
       setIsCheckedIn(true);
+      toast.success("Check-in successfully");
     } else {
       // Check-out
       setRecords(
@@ -43,6 +45,7 @@ export default function CheckInCheckOutList() {
         )
       );
       setIsCheckedIn(false);
+      toast.success("Check-out successfully");
     }
   };
 
