@@ -58,11 +58,6 @@ const Sidebar = () => {
       label: "Inventory Management",
       href: "/dashboard/manager/inventory",
     },
-    {
-      icon: ShoppingCart,
-      label: "Sales & POS",
-      href: "/dashboard/manager/sales",
-    },
     { icon: LogOut, label: "Logout", href: "/" },
   ];
 
