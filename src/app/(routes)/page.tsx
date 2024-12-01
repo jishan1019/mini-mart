@@ -14,8 +14,8 @@ import { useRouter } from "next/navigation";
 const Index = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
-    email: "admin@gmail.com",
-    password: "1234",
+    email: "",
+    password: "",
   });
 
   const router = useRouter();

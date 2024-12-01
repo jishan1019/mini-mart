@@ -1,10 +1,17 @@
-export const title = "Farmers Blogs";
-export const fullTitle = "Farmers Blogs - Fine farmer best solution";
-export const tagLine = "The Finest Blogs in the world";
-export const tagLine2 = "Generate idea for creating farmers";
+export const title = "Mini Market";
+export const fullTitle = "Mini Market - Your One-Stop Shop";
+export const tagLine = "The Best Deals for Everyday Essentials";
+export const tagLine2 = "Shop Smart, Save More!";
+
 export const description =
-  "Integrate diversity on your farm. Having different products in your farm ensures stability, sustainability, richer soil, enhance profits.";
-export const keywords = ["Farmers Blogs"];
+  "Discover a wide variety of quality products at affordable prices. From fresh produce to household essentials, Mini Market has everything you need under one roof.";
+
+export const keywords = [
+  "Mini Market",
+  "Grocery Store",
+  "Everyday Essentials",
+  "Affordable Shopping",
+];
 
 export const adminEmail = "admin@gmail.com";
 

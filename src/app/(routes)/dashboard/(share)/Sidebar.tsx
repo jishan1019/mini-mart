@@ -17,19 +17,23 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
 const Sidebar = () => {
   const router = useRouter();
 
-  const auth = JSON.parse(localStorage.getItem("auth") as any);
+  const [role, setRole] = useState("");
 
   useEffect(() => {
+    const auth = JSON.parse(localStorage.getItem("auth") as any);
+
     if (!auth?.email) {
       router.push("/");
+    } else {
+      setRole(auth?.role);
     }
-  }, [auth?.email, router]);
+  }, [router]);
 
   const adminSidebarItem = [
     {
@@ -76,9 +80,9 @@ const Sidebar = () => {
   ];
 
   const menuItems =
-    auth?.role == USER_ROLE.ADMIN
+    role == USER_ROLE.ADMIN
       ? adminSidebarItem
-      : auth?.role == USER_ROLE.MANAGER
+      : role == USER_ROLE.MANAGER
       ? managerSidebarItem
       : employeeSidebarItem;
 
